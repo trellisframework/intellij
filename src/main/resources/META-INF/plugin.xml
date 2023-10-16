@@ -1,0 +1,48 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>net.trellisframework.plugin.intellij</id>
+    <name>Trellis</name>
+    <version>1.0</version>
+    <vendor email="payam.vahedi@gmail.com" url="http://trellisframework.net">Trellis</vendor>
+
+    <description><![CDATA[
+      It's designed to assist Trellis developers.
+    ]]></description>
+
+    <change-notes><![CDATA[
+      <ul>
+        <li>1.0 - Initial release</li>
+      </ul>
+    ]]>
+    </change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+    <actions>
+        <group id="Trellis.Actions" text="Trellis" description="Trellis" popup="true">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="after" relative-to-action="WeighingNewGroup"/>
+            <action id="Trellis.Actions.CreateBread"
+                    class="net.trellisframework.plugin.intellij.InsertBreadAction"
+                    text="Insert Bread"
+                    icon="AllIcons.General.Add"
+                    description="Insert bread">
+                <keyboard-shortcut first-keystroke="control T" second-keystroke="pressed I" keymap="$default"/>
+            </action>
+            <action id="Trellis.Actions.Move"
+                    class="net.trellisframework.plugin.intellij.CloneAction"
+                    text="Clone"
+                    icon="AllIcons.Actions.MenuPaste"
+                    description="Clone">
+                <keyboard-shortcut first-keystroke="control T" second-keystroke="pressed C" keymap="$default"/>
+            </action>
+            <action id="Trellis.Actions.FindReplace"
+                    class="net.trellisframework.plugin.intellij.FindReplaceAction"
+                    text="Replace"
+                    icon="AllIcons.Actions.Replace"
+                    description="Replace">
+                <keyboard-shortcut first-keystroke="control T" second-keystroke="pressed R" keymap="$default"/>
+            </action>
+        </group>
+    </actions>
+</idea-plugin>
