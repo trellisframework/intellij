@@ -68,9 +68,9 @@ public class Utility {
                                 "import lombok.NoArgsConstructor;\n" +
                                 "import lombok.Setter;\n" +
                                 "\n" +
-                                "import javax.persistence.Column;\n" +
-                                "import javax.persistence.Entity;\n" +
-                                "import javax.persistence.Table;\n" +
+                                "import jakarta.persistence.Column;\n" +
+                                "import jakarta.persistence.Entity;\n" +
+                                "import jakarta.persistence.Table;\n" +
                                 "\n" +
                                 "@Getter\n" +
                                 "@Setter\n" +
