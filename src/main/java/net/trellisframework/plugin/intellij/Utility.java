@@ -304,21 +304,21 @@ public class Utility {
 
             private static String edit(String domain) {
                 return "    @PutMapping(\"/{id}\")\n" +
-                        "    public ResponseEntity<" + domain + "> edit(@RequestBody Edit" + domain + "Request request) {\n" +
+                        "    public ResponseEntity<" + domain + "> edit(@Validate @RequestBody Edit" + domain + "Request request) {\n" +
                         "        return ResponseEntity.ok(call(Edit" + domain + "Action.class, request));\n" +
                         "    }\n\n";
             }
 
             private static String modify(String domain) {
                 return "    @PatchMapping(\"/{id}\")\n" +
-                        "    public ResponseEntity<" + domain + "> modify(@RequestBody Modify" + domain + "Request request) {\n" +
+                        "    public ResponseEntity<" + domain + "> modify(@Validate @RequestBody Modify" + domain + "Request request) {\n" +
                         "        return ResponseEntity.ok(call(Modify" + domain + "Action.class, request));\n" +
                         "    }\n\n";
             }
 
             private static String add(String domain) {
                 return "    @PostMapping\n" +
-                        "    public ResponseEntity<" + domain + "> add(@RequestBody Add" + domain + "Request request) {\n" +
+                        "    public ResponseEntity<" + domain + "> add(@Validate @RequestBody Add" + domain + "Request request) {\n" +
                         "        return ResponseEntity.ok(call(Add" + domain + "Action.class, request));\n" +
                         "    }\n\n";
             }
